@@ -1,0 +1,39 @@
+const C2 = Object.freeze({}); 
+var str = "Hello world!";
+ 
+str.startsWith("world", 6) // true
+str.endsWith("Hello", 5) // true
+str.includes("Hello", 6) // false
+var str = "x";str.repeat(3) // "xxx"
+document.write(`Hello ${first} ${last}!`);//first last为变量
+let raw = String.raw`Not a newline: \n`;
+Number.isFinite()用来检查是否为数值。
+Number.isNaN()用来检查一个值是否为NaN。
+Number.isInteger()用来判断一个值是否为整数，3和3.0被视为同一个值。
+Math.trunc()：去除一个数的小数部分，返回整数部分。
+Math.sign()：判断一个数到底是正数、负数、还是零。//返回值-1,-0,+0,1,NaN
+Math.cbrt：计算一个数的立方根。
+#数组
+Array.from方法用于将两类对象转为真正的数组：类似数组的对象（array-like object）和可遍历（iterable）的对象
+任何有length属性的对象，都可以通过Array.from方法转为数组。
+let array = Array.from({ 0: "a", 1: "b", 2: "c", length: 3 });
+let arrNew = Array.from(array, x => x * x);
+Array.of方法用于将一组值，转换为数组。
+Array.of(3, 11, 8) // [3,11,8]
+let array = [1, 4, -5, 10].find((n) => n < 0);
+let array = [1, 5, 10, 15].find(function(value, index, arr) {return true;};当前的值、当前的位置和原数组。
+
+[NaN].indexOf(NaN)// -1 
+[NaN].findIndex(y => Object.is(NaN, y))// 0
+['a', 'b', 'c'].fill(7);new Array(3).fill(7);//7,7,7
+['a', 'b', 'c'].fill(7, 1, 2) // ['a', 7, 'c']
+for (let index of ['a', 'b'].keys());for (let elem of ['a', 'b'].values());for (let [index, elem] of ['a', 'b'].entries())
+##属性
+var Person = {
+            name: '张三',
+            birth:'1990-01-01',
+            // 等同于hello: function ()...
+            hello() { document.write('我的名字是', this.name); }
+          };
+     Person.hello();
+

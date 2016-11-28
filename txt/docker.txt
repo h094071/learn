@@ -1,0 +1,7 @@
+docker 基于LXC技术
+1 环境管理
+2 云计算
+3 虚拟化
+LXC中container用kernel namespace （pid net ipc mnt uts user等）
+
+ groups可以限制blkio、cpu、cpuacct、cpuset、devices、freezer、memory、net_cls、ns九大子系 统的资源
